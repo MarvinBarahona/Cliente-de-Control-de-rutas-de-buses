@@ -1,16 +1,39 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>OpenLayers Basic Example</title>
+    <meta charset="UTF-8">
+    <title>Rutas de buses en el área metropolitana de San Salvador</title>
     <!-- OpenLayers  -->
-    <link rel="stylesheet" href="openlayers/ol.css" type="text/css">
-    <script src="openlayers/ol.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/ol.css" type="text/css">
+    <script src="js/ol.js" type="text/javascript"></script>
 
-    <link rel="stylesheet" href="rutas_buses.css" type="text/css">
-    <script src="rutas_buses.js" type="text/javascript"></script>
+    <!-- Bootstrap -->
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="css/rutas_buses.css" type="text/css">
+    <script src="js/rutas_buses.js" type="text/javascript"></script>
 </head>
 
-<body onload="init();">
-    <div id="map"></div>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <p>En este sitio podrás encontrar la siguiente información, exclusivamente para el área metropolitana de San Salvador: </p>
+      <ol>
+        <li>Cantidad de buses que transitan sobre las calles</li>
+        <li>Recorrido de cada ruta de bus</li>
+        <li>Puntos de parada de los buses</li>
+      </ol>
+      <br>
+    </div>
+    <div class="row">
+      <div id="map" class="col-md-8"></div>
+      <div class="col-md-4">
+        Aquí se deben agregar los controles!
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
