@@ -19,6 +19,7 @@
 <body>
   <div class="container-fluid">
     <div class="row">
+      <h2>SIG para el control de las rutas de buses en parte del área metropolitana de San Salvador</h2>
       <p>En este sitio podrás encontrar la siguiente información, exclusivamente para el área metropolitana de San Salvador: </p>
       <ol>
         <li>Cantidad de buses que transitan sobre las calles</li>
@@ -30,7 +31,27 @@
     <div class="row">
       <div id="map" class="col-md-8"></div>
       <div class="col-md-4">
-        Aquí se deben agregar los controles!
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#base">Cantidad de buses transitando</a></li>
+          <li><a data-toggle="tab" href="#rutas">Buscar ruta de bus</a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div id="base" class="tab-pane face in active">
+            <div class="container">
+              <p>Activar / desactivar capas: </p>
+              <div class="checkbox">
+                <label><input id="checkCalles" type="checkbox" checked>Calles</label>
+              </div>
+              <div class="checkbox">
+                <label><input id="checkParadas" type="checkbox" checked>Paradas</label>
+              </div>
+            </div>
+          </div>
+          <div id="rutas" class="tap-pane fade">
+            Controles para las rutas
+          </div>
+        </div>
       </div>
     </div>
   </div>

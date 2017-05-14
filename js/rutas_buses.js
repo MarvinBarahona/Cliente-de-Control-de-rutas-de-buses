@@ -1,4 +1,16 @@
-$(document).ready(cargarMapaBase);
+var map;
+
+$(document).ready(function(){
+  cargarMapaBase();
+
+  $("#checkCalles").change(function(){
+    cambiarVisibilidadCapa(1, this.checked);
+  });
+
+  $("#checkParadas").change(function(){
+    cambiarVisibilidadCapa(2, this.checked);
+  });
+});
 
 function cargarMapaBase() {
   // Creando la capa de OSM
@@ -13,13 +25,12 @@ function cargarMapaBase() {
     zoom: 11.8
   });
 
-  var map = new ol.Map({
+  window.map = new ol.Map({
     layers: [capaOSM, capaCalles, capaParadas],
     view: view,
     target: 'map'
   });
 }
-
 
 //Cargar una capa del NameSpace rutas de buses.
 function crearCapa(nombreCapa){
@@ -32,4 +43,8 @@ function crearCapa(nombreCapa){
   });
 
   return new ol.layer.Tile({source: wms});
+}
+
+function cambiarVisibilidadCapa(numCapa, visible){
+  window.map.getLayers().item(numCapa).setVisible(visible);
 }
