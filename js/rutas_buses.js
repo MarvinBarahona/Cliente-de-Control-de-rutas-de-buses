@@ -10,7 +10,18 @@ $(document).ready(function(){
   $("#checkParadas").change(function(){
     cambiarVisibilidadCapa(2, this.checked);
   });
+
+  $("#tabBase").click(function(){
+    cambiarVisibilidadCapa(1, $("#checkCalles").is(':checked'));
+    cambiarVisibilidadCapa(2, $("#checkParadas").is(':checked'));
+  });
+
+  $("#tabRutas").click(function(){
+    cambiarVisibilidadCapa(1, false);
+    cambiarVisibilidadCapa(2, false);
+  });
 });
+
 
 function cargarMapaBase() {
   // Creando la capa de OSM
