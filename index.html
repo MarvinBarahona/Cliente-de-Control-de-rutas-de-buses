@@ -11,9 +11,9 @@
     <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap-checkbox.min.js" type="text/javascript"></script>
-    <!-- bootstrap-checkbox -->
 
+    <!-- bootstrap-checkbox -->
+    <script src="js/bootstrap-checkbox.min.js" type="text/javascript"></script>
 
     <link rel="stylesheet" href="css/rutas_buses.css" type="text/css">
     <script src="js/rutas_buses.js" type="text/javascript"></script>
@@ -21,6 +21,8 @@
 
 <body>
   <div class="container-fluid">
+
+    <!-- Presentación del sitio -->
     <div class="row">
       <h2>SIG para el control de las rutas de buses en parte del área metropolitana de San Salvador</h2>
       <p>En este sitio podrás encontrar la siguiente información, exclusivamente para el área metropolitana de San Salvador: </p>
@@ -31,19 +33,29 @@
       </ol>
       <br>
     </div>
+
+    <!-- Contenido -->
     <div class="row">
+      <!-- Espacio para el mapa -->
       <div id="map" class="col-md-8"></div>
+
+      <!-- Controles -->
       <div class="col-md-4">
+
+        <!-- Tabs -->
         <ul class="nav nav-tabs">
           <li class="active"><a data-toggle="tab" href="#base" id="tabBase">Cantidad de buses transitando</a></li>
           <li id="tabRutas"><a data-toggle="tab" href="#rutas">Buscar ruta de bus</a></li>
         </ul>
 
+        <!-- Contenido de los tabs -->
         <div class="tab-content">
-          <br>
+
+          <!-- Tab con los controles de la capa de cantidad de buses por calle -->
           <div id="base" class="tab-pane face in active">
               <h3>Buses por calle</h3>
               <p>Activar / desactivar capas: </p>
+              <!-- Controles -->
               <form role="form" class="form-horizontal">
                 <div class="form-group">
                   <label for="checkCalles" class="control-label col-sm-2">Calles: </label>
@@ -60,14 +72,15 @@
               </form>
           </div>
 
+          <!-- Tab para la búsqueda de rutas -->
           <div id="rutas" class="tap-pane fade">
               <h3>Buscador de rutas de buses</h3>
               <p>Al seleccionar una ruta de bus, se mostrará su trayecto y sus paradas.</p>
+              <!-- Controles -->
               <label for="nombreRuta">Ruta: </label>
               <input type="text" id="nombreRuta" class="form-control">
               <br>
               <button id="btnBuscar" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-
           </div>
         </div>
       </div>
